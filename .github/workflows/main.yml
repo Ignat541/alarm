@@ -20,9 +20,9 @@ jobs:
     - name: Print Hallo Message in Testing
       run: echo "Hello world from Testing job"
 
-my_deployment:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Print Hello Message in Deployment
-      run: echo "Hello world from Deployment job"
+  my_deployment:
+      runs-on: ubuntu-latest
+  
+      steps:
+      - name: Print Hello Message in Deployment
+        run: echo "Hello world from Deployment job"
