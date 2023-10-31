@@ -38,10 +38,15 @@ jobs:
   my_deployment:
       runs-on: ubuntu-latest
       needs: [my_testing]
+      env:
+        VAR_1: "This is first var"
   
       steps:
       - name: Print Hello Message in Deployment
         run: echo "Hello world from Deployment job"
+
+      - name: Printing first variable
+        run : ${{ env.VAR_1 }}
 
       - name: Print few commands
         run: |
@@ -53,5 +58,5 @@ jobs:
         run : aws --version
 
       - name: Lets test some packages if there are here 2
-        run : zip
+        run : zip --version
 
