@@ -49,6 +49,9 @@ jobs:
         run : |
           echo "First var"
           echo "First var is ${{ env.VAR_1 }}"
+          echo "VAR2 = $LocalVAR"
+          env:
+            LocalVAR: 'Super Local VAR'
 
       - name: Print few commands
         run: |
