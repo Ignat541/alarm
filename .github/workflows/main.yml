@@ -1,0 +1,21 @@
+#------------------------
+#GitHub Actions Part 1
+#------------------------
+
+name: My_GitHub Actions
+env:
+  APPLICATION_NAME:    "MyFlask"
+  DEPLOY_PACKAGE_NAME: "flask-deploy-ver-${{  github.sha }}"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  my_testing:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print Haello Message in Testin
+      run: echo "Hello world from Testing job"
