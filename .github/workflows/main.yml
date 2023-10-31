@@ -37,7 +37,6 @@ jobs:
     
   my_deployment:
       runs-on: ubuntu-latest
-      needs: [my_testing]
       env:
         VAR_1: "Sam"
   
@@ -46,12 +45,13 @@ jobs:
         run: echo "Hello world from Deployment job"
 
       - name: Printing first variable
+        env:
+          LocalVAR: 'Super Local VAR'
         run : |
           echo "First var"
           echo "First var is ${{ env.VAR_1 }}"
           echo "VAR2 is $LocalVAR"
-          env:
-            LocalVAR: 'Super Local VAR'
+          
 
       - name: Print few commands
         run: |
