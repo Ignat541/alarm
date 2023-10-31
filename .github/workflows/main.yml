@@ -28,6 +28,7 @@ jobs:
 
   my_deployment:
       runs-on: ubuntu-latest
+      needs: [my_testing]
   
       steps:
       - name: Print Hello Message in Deployment
