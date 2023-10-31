@@ -27,13 +27,13 @@ jobs:
         echo "Application name is ${{ env.APPLICATION_NAME }}"
 
     - name: list current folder
-      run : ls-la
+      run : ls -la
       
     - name: Git clone my repo
       uses: actions/checkout@v1
 
     - name: list current folder
-      run : ls-la
+      run : ls -la
     
   my_deployment:
       runs-on: ubuntu-latest
